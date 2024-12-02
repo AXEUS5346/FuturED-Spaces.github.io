@@ -1,0 +1,149 @@
+/* Custom cursor styles */
+* {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                background-color 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+.cursor-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: pulse 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cursor-gradient {
+    position: absolute;
+    inset: -1px;
+    background: conic-gradient(
+        from 0deg,
+        #9feb25,
+        #60a5fa,
+        #93fd93,
+        #60a5fa,
+        #eb2556
+    );
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.5;
+    animation: rotate 4s linear infinite;
+    mix-blend-mode: screen;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    mix-blend-mode: difference;
+}
+
+/* Hover effects */
+.custom-cursor.hover {
+    width: 60px;
+    height: 60px;
+}
+
+.custom-cursor.hover .cursor-ring {
+    animation: pulse 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cursor-dot.hover {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* Click effects */
+.custom-cursor.clicking {
+    width: 35px;
+    height: 35px;
+}
+
+.custom-cursor.clicking .cursor-gradient {
+    filter: blur(5px);
+    opacity: 0.8;
+}
+
+.cursor-dot.clicking {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Text hover effect */
+.custom-cursor.text {
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: invert(1);
+}
+
+.cursor-dot.text {
+    width: 3px;
+    height: 15px;
+    border-radius: 1px;
+    transform: translate(-50%, -50%);
+}
+
+/* Animations */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Magnetic effect animation */
+@keyframes magnetic {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Hide cursor when inactive */
+.custom-cursor.inactive,
+.cursor-dot.inactive {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
