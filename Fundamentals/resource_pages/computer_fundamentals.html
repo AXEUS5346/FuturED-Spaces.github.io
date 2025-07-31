@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Fundamentals Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .tip-box {
+            border: 2px solid #6366f1;
+            background-color: #eef2ff;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 0.5em;
+        }
+        
+        .tech-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-indigo-50 min-h-screen">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <a href="../Resources_page.html" class="text-purple-600 hover:text-purple-800">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Resources
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8 font-playfair">Computer Fundamentals</h1>
+        
+        <!-- Quick Tip Box -->
+        <div class="tip-box mb-8">
+            <div class="flex items-center text-indigo-600 font-bold mb-2">
+                <i class="fas fa-lightbulb mr-2"></i>
+                Quick Tip
+            </div>
+            <p class="text-indigo-800">Understanding computer fundamentals is essential in today's digital world. Start with the basics and gradually build your knowledge.</p>
+        </div>
+
+        <!-- Summary Overview -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Overview of Computing</h2>
+            
+            <!-- Visual Summary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- Hardware Card -->
+                <div class="bg-indigo-50 rounded-lg p-6 border border-indigo-200">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">💻</span>
+                        <h3 class="font-bold text-lg">Hardware Components</h3>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Central Processing Unit (CPU)</li>
+                        <li>Memory (RAM & ROM)</li>
+                        <li>Storage Devices</li>
+                        <li>Input/Output Devices</li>
+                    </ul>
+                </div>
+
+                <!-- Software Card -->
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-200">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">⚙️</span>
+                        <h3 class="font-bold text-lg">Software Systems</h3>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Operating Systems</li>
+                        <li>Application Software</li>
+                        <li>System Utilities</li>
+                        <li>Programming Languages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Core Components Grid -->
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
+                <h3 class="font-bold text-lg mb-4">Core Computing Components</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-3xl mb-2 block">🔍</span>
+                        <h4 class="font-bold">Processing</h4>
+                        <p class="text-sm text-gray-600">Data computation</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-3xl mb-2 block">💾</span>
+                        <h4 class="font-bold">Storage</h4>
+                        <p class="text-sm text-gray-600">Data retention</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-3xl mb-2 block">🔄</span>
+                        <h4 class="font-bold">Memory</h4>
+                        <p class="text-sm text-gray-600">Active data</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <span class="text-3xl mb-2 block">🔌</span>
+                        <h4 class="font-bold">I/O</h4>
+                        <p class="text-sm text-gray-600">Data transfer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Flow Process -->
+            <div class="bg-white p-6 rounded-lg border border-gray-200">
+                <h3 class="font-bold text-lg mb-4">Basic Computer Processing Flow</h3>
+                <div class="flex flex-col md:flex-row justify-between items-center text-center gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <span class="text-2xl mb-2 block">📥</span>
+                        <h4 class="font-bold">Input</h4>
+                    </div>
+                    <div class="text-2xl text-gray-400">→</div>
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                        <span class="text-2xl mb-2 block">⚡</span>
+                        <h4 class="font-bold">Process</h4>
+                    </div>
+                    <div class="text-2xl text-gray-400">→</div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <span class="text-2xl mb-2 block">💽</span>
+                        <h4 class="font-bold">Storage</h4>
+                    </div>
+                    <div class="text-2xl text-gray-400">→</div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <span class="text-2xl mb-2 block">📤</span>
+                        <h4 class="font-bold">Output</h4>
+                    </div>
+                </div>
+                <div class="text-center mt-4 text-sm text-gray-600">
+                    Figure 1: Basic computer data processing flow
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction to Computing</h2>
+            <p class="text-gray-600 mb-6">
+                Computer fundamentals cover the essential concepts and skills needed to understand and use computers effectively. From basic hardware components to software applications, this resource will help you build a strong foundation in computing.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Hardware Basics</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>CPU and Processing</li>
+                        <li>Memory (RAM & ROM)</li>
+                        <li>Storage devices</li>
+                        <li>Input/Output devices</li>
+                        <li>Motherboard components</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Software Concepts</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Operating systems</li>
+                        <li>Application software</li>
+                        <li>File management</li>
+                        <li>System utilities</li>
+                        <li>Programming basics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg mb-8">
+                <h3 class="font-bold text-lg mb-3">Digital Literacy Skills</h3>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li>Internet navigation</li>
+                    <li>Email management</li>
+                    <li>Document creation</li>
+                    <li>Data security</li>
+                    <li>Online collaboration</li>
+                </ol>
+            </div>
+
+            <div class="bg-yellow-50 p-6 rounded-lg">
+                <h3 class="font-bold text-lg mb-3">Learning Resources</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold">Online Tutorials</h4>
+                        <p class="text-sm text-gray-600">Interactive learning platforms</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold">Practice Exercises</h4>
+                        <p class="text-sm text-gray-600">Hands-on learning activities</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold">Video Courses</h4>
+                        <p class="text-sm text-gray-600">Visual learning materials</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold">Documentation</h4>
+                        <p class="text-sm text-gray-600">Reference materials and guides</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Emerging Technologies</h2>
+            <p class="text-gray-600 mb-6">
+                The computing landscape is rapidly evolving with breakthrough technologies that are transforming industries and daily life:
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Visualization" class="tech-image">
+                    <div class="image-caption">Modern AI and Machine Learning Applications</div>
+                    <h3 class="font-bold text-lg">Artificial Intelligence & Machine Learning</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Large Language Models (LLMs)</li>
+                        <li>Computer Vision</li>
+                        <li>Neural Networks</li>
+                        <li>Natural Language Processing</li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0" alt="Web3 Visualization" class="tech-image">
+                    <div class="image-caption">Blockchain and Web3 Technologies</div>
+                    <h3 class="font-bold text-lg">Web3 & Blockchain</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Smart Contracts</li>
+                        <li>Decentralized Applications (dApps)</li>
+                        <li>NFTs and Digital Assets</li>
+                        <li>Cryptocurrency Technologies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a" alt="IoT Devices" class="tech-image">
+                    <div class="image-caption">Internet of Things Ecosystem</div>
+                    <h3 class="font-bold text-lg">Internet of Things (IoT)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Smart Home Devices</li>
+                        <li>Industrial IoT (IIoT)</li>
+                        <li>Edge Computing</li>
+                        <li>Sensor Networks</li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa" alt="Quantum Computing" class="tech-image">
+                    <div class="image-caption">Quantum Computing Research</div>
+                    <h3 class="font-bold text-lg">Advanced Computing</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Quantum Computing</li>
+                        <li>Cloud Computing</li>
+                        <li>Edge Computing</li>
+                        <li>Neuromorphic Computing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Cloud Computing Fundamentals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Infrastructure (IaaS)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Virtual Machines</li>
+                        <li>Storage Solutions</li>
+                        <li>Networking</li>
+                        <li>Security Services</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Platform (PaaS)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Development Tools</li>
+                        <li>Database Management</li>
+                        <li>Application Hosting</li>
+                        <li>API Management</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Software (SaaS)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Productivity Apps</li>
+                        <li>Communication Tools</li>
+                        <li>Business Applications</li>
+                        <li>Analytics Platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Programming Fundamentals</h2>
+            <p class="text-gray-600 mb-6">
+                Learn the basics of programming and coding concepts that form the foundation of software development. This section has been updated to reflect the latest trends in programming.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-indigo-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Basic Concepts</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Variables and data types</li>
+                        <li>Control structures</li>
+                        <li>Functions and methods</li>
+                        <li>Arrays and objects</li>
+                        <li>Basic algorithms</li>
+                        <li>Object-Oriented Programming (OOP)</li>
+                        <li>Asynchronous Programming</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-pink-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-3">Popular Languages</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>HTML/CSS</li>
+                        <li>Go</li>
+                        <li>Rust</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <p class="text-center text-gray-600">© 2024 Educational Resources. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
