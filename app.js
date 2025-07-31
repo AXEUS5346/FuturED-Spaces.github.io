@@ -434,6 +434,122 @@ function switchPage(pageId) {
 }
 
 // Auto-save functionality
+let autoSaveTimeout;
+
+function autoSave() {
+    clearTimeout(autoSaveTimeout);
+    autoSaveTimeout = setTimeout(() => {
+        localStorage.setItem('editorContent', editor.innerHTML);
+        showToast('Content auto-saved');
+    }, 2000);
+}
+
+// Restore content on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedContent = localStorage.getItem('editorContent');
+    if (savedContent) {
+        editor.innerHTML = savedContent;
+    }
+});
+
+// Word and character counter
+function updateStats() {
+    const text = editor.innerText;
+    const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+    const chars = text.length;
+
+    document.getElementById('wordCount').textContent = `Words: ${words.length}`;
+    document.getElementById('charCount').textContent = `Characters: ${chars}`;
+}
+
+editor.addEventListener('input', () => {
+    autoSave();
+    updateStats();
+});
+
+// Search and replace functionality
+function toggleSearchPanel() {
+    const panel = document.querySelector('.search-replace-panel');
+    panel.classList.toggle('active');
+    if (panel.classList.contains('active')) {
+        document.getElementById('searchInput').focus();
+    }
+}
+
+function findNext() {
+    const searchText = document.getElementById('searchInput').value;
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    const content = editor.innerText;
+    const startPos = range.endOffset;
+    
+    const foundPos = content.indexOf(searchText, startPos);
+    if (foundPos !== -1) {
+        const newRange = document.createRange();
+        newRange.setStart(editor.firstChild, foundPos);
+        newRange.setEnd(editor.firstChild, foundPos + searchText.length);
+        selection.removeAllRanges();
+        selection.addRange(newRange);
+    }
+}
+
+function replace() {
+    const searchText = document.getElementById('searchInput').value;
+    const replaceText = document.getElementById('replaceInput').value;
+    const selection = window.getSelection();
+    
+    if (selection.toString() === searchText) {
+        const range = selection.getRangeAt(0);
+        range.deleteContents();
+        range.insertNode(document.createTextNode(replaceText));
+        findNext();
+    }
+}
+
+function replaceAll() {
+    const searchText = document.getElementById('searchInput').value;
+    const replaceText = document.getElementById('replaceInput').value;
+    editor.innerHTML = editor.innerHTML.replaceAll(searchText, replaceText);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey) {
+        switch (e.key.toLowerCase()) {
+            case 's':
+                e.preventDefault();
+                autoSave();
+                break;
+            case 'f':
+                e.preventDefault();
+                toggleSearchPanel();
+                break;
+            case '/':
+                e.preventDefault();
+                toggleShortcutsPanel();
+                break;
+        }
+    }
+});
+
+function toggleShortcutsPanel() {
+    const panel = document.querySelector('.keyboard-shortcuts');
+    panel.classList.toggle('active');
+}
+
+// Toast notification
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
+
+// Auto-save functionality
 const editor = document.querySelector('.editor');
 editor.addEventListener('input', () => {
     if (currentPageId && pages[currentPageId]) {
